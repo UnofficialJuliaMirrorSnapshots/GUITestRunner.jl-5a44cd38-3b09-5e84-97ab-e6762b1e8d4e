@@ -1,0 +1,13 @@
+# Documentation: http://docs.travis-ci.com/user/languages/julia/
+sudo: true
+language: julia
+os:
+  - linux
+  - osx
+julia:
+  - release
+#  Tk.jl does not work under Julia 0.5 yet
+#  - nightly
+notifications:
+  email: false
+script: ./scripts/ci.sh
